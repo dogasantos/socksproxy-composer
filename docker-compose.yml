@@ -1,0 +1,12 @@
+version: '2.0'
+
+services:
+    socks5:
+        image: serjs/go-socks5-proxy:latest
+        container_name: socks5
+        ports:
+            - "2081:1080"
+        environment:
+            - PROXY_USER=imaleetuser
+            - PROXY_PASSWORD=hereismystrongsecretpassword
+        restart: unless-stopped
